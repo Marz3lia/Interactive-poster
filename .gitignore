@@ -1,7 +1,181 @@
-.DS_Store
-applet
-application.linux32
-application.linux64
-application.windows32
-application.windows64
-application.macosx
+But but1, but2;
+int buttHi1 = 150;
+int buttHi2 = 150;
+int buttHi3 = 150;
+int buttHi4 = 150;
+int buttHi5 = 150;
+int mainButtHi = 100;
+int x1 = width/2;
+int y1 = height/2-300;
+int x2 = width/2+250;
+int y2 = height/2-100;
+int x3 = width/2-250;
+int y3 = height/2-100;
+int x4 = width/2+200;
+int y4 = height/2+250;
+int x5 = width/2-200;
+int y5 = height/2+250;
+int xCenter = width/2;
+int yCenter = height/2;
+Boolean XIV = false;
+void setup() {
+  size (841, 1189);
+
+  but1 = new But(color(150), x1, y1);
+  but2 = new But(color(150), x2, y2);
+  
+}
+class button {
+}
+
+void draw () {
+  but1.display();
+  but2.display();
+  int x1 = width/2;
+  int y1 = height/2-300;
+  int x2 = width/2+250;
+  int y2 = height/2-100;
+  int x3 = width/2-250;
+  int y3 = height/2-100;
+  int x4 = width/2+200;
+  int y4 = height/2+250;
+  int x5 = width/2-200;
+  int y5 = height/2+250;
+  int xCenter = width/2;
+  int yCenter = height/2;
+  color s1 = color(255, 255, 255);
+  int cS1 = 150;
+  PImage bG = loadImage("Background.jpg");
+  bG.resize(841, 1189);
+  image(bG, 0, 0);
+  fill(s1);
+  stroke(cS1);
+  //ellipse(x1, y1, cS1, cS1);
+  fill(buttHi2);
+  ellipse(x2, y2, cS1, cS1);
+  fill(buttHi3);
+  ellipse(x3, y3, cS1, cS1);
+  fill(buttHi4);
+  ellipse(x4, y4, cS1, cS1);
+  fill(buttHi5);
+  ellipse(x5, y5, cS1, cS1);
+  fill(250, 150, 50);
+  noStroke();
+  ellipse(x1, y1, 125, 125);
+  fill(50, 100, 200);
+  ellipse(x2, y2, 125, 125);
+  fill(180, 0, 180);
+  ellipse(x3, y3, 125, 125);
+  fill(50, 210, 100);
+  ellipse(x4, y4, 125, 125);
+  fill(255, 255, 0);
+  ellipse(x5, y5, 125, 125);
+  fill(mainButtHi);
+  stroke(0);
+  ellipse(xCenter, yCenter, 125, 125);
+  fill(255, 0, 0);
+  noStroke();
+  ellipse(xCenter, yCenter, 100, 100);
+  fill(0, 0, 0, 0);
+  stroke(0);
+  rectMode(CENTER);
+  rect(x1, y1, 90, 70);
+  rect(x2, y2, 90, 70);
+  rect(x3, y3, 90, 70);
+  rect(x4, y4, 90, 70);
+  rect(x5, y5, 90, 70);
+  //Circles and squares with diffrent colors
+  if (XIV == true) {
+    PImage KingXIV = loadImage("CyberKingXIV.png");
+    KingXIV.resize(700, 950);
+    image(KingXIV, 50, 100);
+    if (mousePressed) {
+      if (mouseX>0 && mouseX <0+841 && mouseY>0 && mouseY <0+1189)
+      XIV = false;
+    }
+  } else {
+    XIV = false;
+  }
+}
+class But{
+  color c;
+  float xpos;
+  float ypos;
+  
+  But(color tempC, float tempXpos, float tempYpos){
+    c = tempC;
+    xpos = tempXpos;
+    ypos = tempYpos;
+  }
+  
+  void display(){
+    stroke(200);
+    fill(150);
+    ellipse(xpos, ypos, 150, 150);
+  }
+}
+void mouseClicked() {
+  //int x1 = width/2;
+  //int y1 = height/2-300;
+  int x2 = width/2+250;
+  int y2 = height/2-100;
+  int x3 = width/2-250;
+  int y3 = height/2-100;
+  int x4 = width/2+200;
+  int y4 = height/2+250;
+  int x5 = width/2-200;
+  int y5 = height/2+250;
+  int xCenter = width/2;
+  int yCenter = height/2;
+  color s1 = color(255, 255, 255);
+  int cS1 = 150;
+ /* if (mouseX>x1 && mouseX <x1+cS1 && mouseY>y1 && mouseY <y1+cS1) {
+    if (buttHi1 == 150 && s1 == color(255, 255, 255)) {
+      buttHi1 = 200;
+      s1 = color(255, 255, 0);
+      println("It works");
+    }
+  } else {
+    buttHi1 = 150;
+    s1 = color(255, 255, 255);
+  }*/
+  /*if (){
+    
+  }*/
+  if (mouseX>x2 && mouseX <x2+cS1 && mouseY>y2 && mouseY <y2+cS1) {
+    if (buttHi2 == 150)
+    buttHi2 = 255;
+    println("It works");
+  } else {
+    buttHi2= 150;
+  }
+  if (mouseX>x3 && mouseX <x3+cS1 && mouseY>y3 && mouseY <y3+cS1) {
+    if (buttHi3 == 150)
+    buttHi3 = 255;
+    println("It works");
+  } else {
+    buttHi3 = 150;
+  }
+  if (mouseX>x4 && mouseX <x4+cS1 && mouseY>y4 && mouseY <y4+cS1) {
+    if (buttHi4 == 150)
+    buttHi4 = 255;
+    println("It works");
+  } else {
+    buttHi4 = 150;
+  }
+  if (mouseX>x5 && mouseX <x5+cS1 && mouseY>y5 && mouseY <y5+cS1) {
+    if (buttHi5 == 150)
+    buttHi5 = 255;
+    println("It works");
+  } else {
+    buttHi5 = 150;
+  }
+  if (mouseX>xCenter && mouseX <xCenter+cS1 && mouseY>yCenter && mouseY <yCenter+cS1) {
+    if (mainButtHi == 100)
+    mainButtHi = 0;
+    XIV = true;
+    println("It works");
+  } else {
+    mainButtHi = 100;
+  }
+}
